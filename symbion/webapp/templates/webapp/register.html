@@ -1,0 +1,32 @@
+{% extends 'webapp/base.html'%}
+
+{% block content %}
+    <body>
+        <div class="container bg-light shadow-md p-5 ">
+            <h3>Create your account</h3>
+
+            <h5> Get started with Symbion! </h5>
+            <hr>
+            <br>
+
+            <form method="POST" autocomplete="off">
+                {%csrf_token%}
+
+                {{form.as_p}}
+
+                <br>
+
+                <button type="submit" class="btn btn-primary w-100 btn-block p-3"></button>
+            </form>
+            <br>
+
+            <div class="text-center">
+                <p>Already have an account</p> <a href="{% url ''%}">Login</a>
+            </div>
+        </div>
+    <br>
+    </body>
+    
+        
+
+{% endblock content%}
