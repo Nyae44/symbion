@@ -1,8 +1,10 @@
 {% extends 'webapp/base.html'%}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
     <body>
-        <div class="container bg-light shadow-md p-5 ">
+        <div class="container bg-light shadow-md p-5 form-layout">
             <h3>Create your account</h3>
 
             <h5> Get started with Symbion! </h5>
@@ -12,11 +14,11 @@
             <form method="POST" autocomplete="off">
                 {%csrf_token%}
 
-                {{form.as_p}}
+                {{form|crispy}}
 
                 <br>
 
-                <button type="submit" class="btn btn-primary w-100 btn-block p-3"></button>
+                <button type="submit" class="btn btn-primary w-100 btn-block p-3">Submit</button>
             </form>
             <br>
 
