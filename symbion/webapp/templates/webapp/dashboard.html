@@ -2,6 +2,44 @@
 
 {%block content%}
 
-    <h1>Welcome to the dashboard page! {{user}}</h1>
+    <h5>Welcome to the dashboard page, {{user}}!</h5>
+
+    <hr>
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'dashboard' %}">Create a new record</a>
+
+    <hr>
+    <table class="table  table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Full name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone number</th>
+                <th scope="col">Address</th>
+                <th scope="col">City</th>
+                <th scope="col">County</th>
+                <th scope="col">Date joined</th>
+
+                <th scope="col">View</th> 
+
+            </tr>
+        </thead>
+        <tbody>
+        {% if records %}
+            {% for record in records %}
+            <tr>
+                <td>{{record.id}}</td>
+                <td>{{record.first_name}} {{record.last_name}}</td>
+                <td>{{record.email}}</td>
+                <td>{{record.phone}}</td>
+                <td>{{record.address}}</td>
+                <td>{{record.city}}</td>
+                <td>{{record.county}}</td>
+                <td>{{record.date_created}}</td>
+            </tr>
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>   
 
 {%endblock content%}
