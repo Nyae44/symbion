@@ -24,17 +24,17 @@ pip install -r requirements.txt
 3. **Make database migrations**
 
 ```bash
-py manage.py makemigrations
+python3 manage.py makemigrations
 ```
 
 then
 
 ```bash
-py manage.py migrate
+python3 manage.py migrate
 ```
 
 4. **Run server**
 
 ```bash
-py manage.py runserver
+python3 manage.py runserver
 ```
