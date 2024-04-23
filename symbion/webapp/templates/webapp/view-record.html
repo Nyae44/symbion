@@ -1,0 +1,30 @@
+ {% extends 'webapp/base.html'%}
+
+ {% block content %}
+
+    <div class="card">
+        <strong>
+            {{record.first_name}}
+            {{record.last_name}}
+        </strong>
+        <div class="card-body">
+            <p> <strong> ID: </strong> {{record.id}}</p>
+            <p> <strong> Email: </strong> {{record.email}}</p>
+            <p> <strong> Phone number: </strong> {{record.phone}}</p>
+            <p> <strong> Address: </strong> {{record.address}}</p>
+            <p> <strong> City: </strong> {{record.city}}</p>
+            <p> <strong> County: </strong> {{record.county}}</p>
+            <p> <strong> Date created: </strong> {{record.date_created}}</p>
+         
+            
+
+
+            
+        </div>
+
+
+
+
+    </div>
+
+ {% endblock content %}
