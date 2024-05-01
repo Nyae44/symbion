@@ -115,10 +115,12 @@ def delete_record(request, pk):
     return redirect("dashboard")
 
 
+
    
 
 
 # User logout 
+@login_required(login_url="my-login")
 def user_logout(request):
 
     auth.logout(request)
