@@ -36,6 +36,8 @@
                 <td>{{record.city}}</td>
                 <td>{{record.county}}</td>
                 <td>{{record.date_created}}</td>
+
+                <td> <a href="{% url 'record' record.id %}">View record</a></td>
             </tr>
             {% endfor %}
         {% endif %}

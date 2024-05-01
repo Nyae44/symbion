@@ -34,6 +34,7 @@ python3 manage.py migrate
 ```
 
 4. **Run server**
+   cd symbion
 
 ```bash
 python3 manage.py runserver

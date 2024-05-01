@@ -4,9 +4,12 @@
 
     <div class="card">
         <strong>
+            <br>
+            &nbsp; &nbsp;
+            {{record.last_name | upper}}
             {{record.first_name}}
-            {{record.last_name}}
         </strong>
+        <hr>
         <div class="card-body">
             <p> <strong> ID: </strong> {{record.id}}</p>
             <p> <strong> Email: </strong> {{record.email}}</p>
@@ -26,5 +29,18 @@
 
 
     </div>
+
+    <br>
+
+    <a href="{% url 'dashboard'%}" class="btn btn-secondary">Return</a>
+
+    &nbsp;
+
+    <a href="{% url 'update-record' record.id%} " class="btn btn-info">Update record</a>
+
+    &nbsp;
+
+    <a href="{% url 'delete-record' record.id%}" class="btn btn-danger">Delete</a>
+
 
  {% endblock content %}

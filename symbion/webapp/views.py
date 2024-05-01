@@ -98,7 +98,7 @@ def update_record(request, pk):
 
 # Read or view a single record
 @login_required(login_url='my-login')
-def update_record(request, pk):
+def singular_record(request, pk):
 
     all_records = Record.objects.get(id=pk)
 
@@ -106,10 +106,21 @@ def update_record(request, pk):
     return render(request, 'webapp/view-record.html', context=context)
 
 
+# Delete a record
+@login_required(login_url='my-login')
+def delete_record(request, pk):
+    record = Record.objects.get(id=pk)
+    
+    record.delete()
+    return redirect("dashboard")
+
+
+
    
 
 
 # User logout 
+@login_required(login_url="my-login")
 def user_logout(request):
 
     auth.logout(request)
