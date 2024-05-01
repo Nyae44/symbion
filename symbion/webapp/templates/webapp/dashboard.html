@@ -5,7 +5,8 @@
     <h5>Welcome to the dashboard page, {{user}}!</h5>
 
     <hr>
-    <a class="btn btn-outline-primary btn-sm" href="{% url 'create-record' %}">Create a new record</a>
+    <a class="btn btn-outline-primary btn-sm" href="{% url 'create-record' %}">Create a new record &nbsp; <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </a>
 
     <hr>
     <table class="table  table-hover table-bordered">
@@ -37,7 +38,8 @@
                 <td>{{record.county}}</td>
                 <td>{{record.date_created}}</td>
 
-                <td> <a href="{% url 'record' record.id %}">View record</a></td>
+                <td> <a href="{% url 'record' record.id %}" class="btn btn-success"> <i class="fa fa-eye" aria-hidden="true"></i>
+                </a></td>
             </tr>
             {% endfor %}
         {% endif %}
