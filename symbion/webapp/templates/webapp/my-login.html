@@ -16,7 +16,11 @@
             <form method="POST" autocomplete="off">
                 {%csrf_token%}
 
-                {{form2|crispy}}
+                {{form2.username|as_crispy_field}}
+
+                <br>
+
+                {{form2.password|as_crispy_field}}
 
                 <br>
 
