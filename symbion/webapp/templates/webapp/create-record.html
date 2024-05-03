@@ -15,9 +15,29 @@
             <form method="POST" autocomplete="off">
                 {%csrf_token%}
 
-                {{form|crispy}}
+                {{form.first_name|as_crispy_field}}
 
                 <br>
+
+                {{form.last_name|as_crispy_field}}
+
+                <br>
+                {{form.email|as_crispy_field}}
+
+                <br>
+                {{form.phone|as_crispy_field}}
+                <br>
+                {{form.address|as_crispy_field}}
+
+                <br>
+
+                {{form.city|as_crispy_field}}
+
+                <br>
+                {{form.county|as_crispy_field}}
+                <br>
+
+                
 
                 <button type="submit" class="btn btn-primary">Create record <i class="fa fa-check" aria-hidden="true"></i>
                 </button>

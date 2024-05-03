@@ -15,16 +15,36 @@
             <form method="POST" autocomplete="off">
                 {%csrf_token%}
 
-                {{form|crispy}}
+                {{form.first_name|as_crispy_field}}
 
                 <br>
 
-                <button type="submit" class="btn btn-primary">Update record &nbsp; <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                {{form.last_name|as_crispy_field}}
+
+                <br>
+                {{form.email|as_crispy_field}}
+
+                <br>
+                {{form.phone|as_crispy_field}}
+                <br>
+                {{form.address|as_crispy_field}}
+
+                <br>
+
+                {{form.city|as_crispy_field}}
+
+                <br>
+                {{form.county|as_crispy_field}}
+
+                <br>
+
+                <button type="submit" class="btn btn-info">Update record &nbsp; <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
                 <a href="{% url 'dashboard' %}" class="btn btn-secondary">Return &nbsp; <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 </a>
             </form>
         </div>
+    <br>
     </body>
 
 {% endblock content %}
