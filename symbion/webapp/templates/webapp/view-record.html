@@ -3,14 +3,15 @@
  {% block content %}
 
     <div class="card">
-        <strong>
-            <br>
-            &nbsp; &nbsp;
-            {{record.last_name | upper}}
-            {{record.first_name}}
-        </strong>
-        <hr>
+       
         <div class="card-body">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;
+
+            <strong>
+                {{record.last_name | upper}}
+                {{record.first_name}}
+            </strong>
+            <hr>
             <p> <strong> ID: </strong> {{record.id}}</p>
             <p> <strong> Email: </strong> {{record.email}}</p>
             <p> <strong> Phone number: </strong> {{record.phone}}</p>
